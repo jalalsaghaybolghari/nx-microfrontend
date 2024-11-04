@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@libs/shared": ["libs/shared/src/index.ts"],
       "@libs/auth": ["libs/auth/src/index.ts"]
     }
   },

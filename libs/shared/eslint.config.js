@@ -12,7 +12,6 @@ module.exports = [
         'error',
         {
           type: 'attribute',
-          prefix: 'lib',
           style: 'camelCase',
         },
       ],

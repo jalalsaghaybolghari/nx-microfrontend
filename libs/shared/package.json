@@ -1,0 +1,14 @@
+{
+    "name": "shared",
+    "version": "1.0.0",
+    "peerDependencies": {
+      "@angular/core": "auto",
+      "@angular/router": "auto",
+      "@angular/common": "auto",
+      "rxjs": "auto",
+      "@ngrx/store": "auto",
+      "devextreme": "auto",
+      "devextreme-angular":"auto",
+      "@fortawesome/angular-fontawesome":"auto"
+    }
+  }
