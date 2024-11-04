@@ -1,0 +1,10 @@
+{
+    "name": "auth",
+    "version": "1.0.0",
+    "peerDependencies": {
+      "@angular/core": "auto",
+      "@angular/router": "auto",
+      "@angular/common": "auto",
+      "rxjs": "auto"
+    }
+  }
