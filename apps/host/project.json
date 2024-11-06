@@ -22,7 +22,15 @@
             "input": "apps/host/public"
           }
         ],
-        "styles": ["apps/host/src/styles.scss"],
+        "styles": [
+          "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+          "node_modules/ngx-toastr/toastr.css",
+          "apps/host/src/app/layouts/style/main.scss",
+          "node_modules/devextreme/dist/css/dx.light.css",
+          "apps/host/src/app/layouts/style/themes/theme.base.css",
+          "apps/host/src/app/layouts/style/themes/theme.additional.css",
+          "apps/host/src/styles.scss"
+        ],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/host/webpack.config.ts"

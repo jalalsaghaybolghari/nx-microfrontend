@@ -1,0 +1,105 @@
+<div class="register">
+  <div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop >
+      <source src="/assets/videos/video.mp4" type="video/mp4" />
+      <source src="/assets/videos/video.webm" type="video/webm" />
+      Your browser is not support!
+    </video>
+  </div>
+  <form (submit)="onRegisterFormSubmit($event)" class="register-form">
+    <dx-form id="form" [(formData)]="form">
+      <dxi-item itemType="group" caption="Register">
+        <dxi-item dataField="username" [isRequired]="true"
+          ><dxo-label text="User Name"> </dxo-label
+        ></dxi-item>
+        <dxi-item dataField="firstname" [isRequired]="true"
+          ><dxo-label text="First Name"> </dxo-label
+        ></dxi-item>
+        <dxi-item dataField="lastname" [isRequired]="true">
+          <dxo-label text="Last Name"> </dxo-label>
+        </dxi-item>
+        <dxi-item
+          dataField="phonenumber"
+          [isRequired]="true"
+          [editorOptions]="phoneEditorOptions"
+        >
+          <dxo-label text="Phone Number"> </dxo-label>
+          <dxi-validation-rule
+            type="pattern"
+            [pattern]="phoneRegex"
+            message="Phone number is incorrect"
+          >
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item
+          dataField="email"
+          [isRequired]="true"
+          [editorOptions]="emailEditorOptions"
+        >
+          <dxo-label text="Email"> </dxo-label>
+          <dxi-validation-rule type="required" message="Email is required">
+          </dxi-validation-rule>
+          <dxi-validation-rule type="email" message="Email is invalid">
+          </dxi-validation-rule>
+        </dxi-item>
+        <dxi-item
+          dataField="password"
+          [isRequired]="true"
+          [editorOptions]="passwordEditorOptions"
+        >
+          <dxo-label text="Password"> </dxo-label>
+          <dxi-validation-rule type="required" message="Password is required">
+          </dxi-validation-rule>
+          <dxi-validation-rule
+            type="pattern"
+            [pattern]="passwordRegex"
+            message="Password must min 6 character(contain numbers,letters(upper and lower) and special char)"
+          >
+          </dxi-validation-rule>
+        </dxi-item>
+
+        <dxi-item
+          dataField="confirmpassword"
+          [isRequired]="true"
+          [editorOptions]="confirmPasswordEditorOptions"
+        >
+          <dxo-label text="Confirm Password"> </dxo-label>
+          <dxi-validation-rule
+            type="required"
+            message="Confirm Password is required"
+          >
+          </dxi-validation-rule>
+          <dxi-validation-rule
+            type="compare"
+            [comparisonTarget]="passwordComparison"
+            message="Password and Confirm Password do not match"
+          >
+          </dxi-validation-rule>
+        </dxi-item>
+      </dxi-item>
+
+      <dxi-item itemType="group" [colCountByScreen]="colCountByScreen">
+        <div class="buttons-group">
+          <dx-button
+            stylingMode="text"
+            text="Login"
+            type="default"
+            [width]="120"
+            (onClick)="onLoginButtonClick()"
+          >
+          </dx-button>
+
+          <dx-button
+            stylingMode="contained"
+            text="Register"
+            type="success"
+            icon="fa-solid fa-user-plus"
+            [useSubmitBehavior]="true"
+            [width]="160"
+          >
+          </dx-button>
+        </div>
+      </dxi-item>
+    </dx-form>
+  </form>
+</div>
