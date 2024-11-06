@@ -15,8 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@libs/auth": ["libs/auth/src/index.ts"],
       "@libs/shared": ["libs/shared/src/index.ts"],
-      "@libs/auth": ["libs/auth/src/index.ts"]
+      "identity/Routes": ["apps/identity/src/app/remote-entry/entry.routes.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
